@@ -1,0 +1,15 @@
+name: this-is-sample-echo-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Read contents on commit
+        run: echo README.md
